@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="LoadAccount">
+    <aura:attribute name="marker" type="String"/>
+    <aura:attribute name="street" type="String"/>
+    <aura:attribute name="city" type="String"/>
+    <aura:attribute name="code" type="String"/>
+</aura:event>

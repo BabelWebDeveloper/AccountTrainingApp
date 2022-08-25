@@ -1,0 +1,54 @@
+<aura:component>
+    <aura:handler event="c:AccountsLoaded" action="{!c.onAccountsLoaded}"/>
+    <aura:registerEvent name="TestEvent" type="c:detailsOnRecordClick"/>
+    <aura:registerEvent name="markerZoom" type="c:LoadAccount"/>
+    <aura:registerEvent name="sendAccountToMap" type="c:sendAccountToMap"/>
+    <lightning:navigation aura:id="navigation"/>
+    <aura:attribute name="rows" type="Map[]"/>
+    <aura:attribute name="cols" type="Map[]"/>
+    <aura:attribute name="records" type="Boolean" default="false"/>
+    <aura:attribute name="message" type="String" default="No records has been searched."/>
+    <lightning:card title="Account List" iconName="standard:event">
+        <aura:if isTrue="{!v.records}">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col" class="accountListItem">
+                        <div class="slds-truncate" title="First Name">Name</div>
+                    </th>
+                    <th scope="col" class="accountListItem">
+                        <div class="slds-truncate" title="Website">Website</div>
+                    </th>
+                    <th scope="col" class="accountListItem">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <aura:iteration items="{!v.rows}" var="item" indexVar="index">
+                    <tr
+                            style="cursor:pointer;"
+                            class="slds-text-title_caps"
+                            data-record="{!index}"
+                            onclick="{!c.selectRecord}">
+                        <td>
+                            <div class="slds-truncate" title="StartDate">{!item.Name}</div>
+                        </td>
+                        <td>
+                            <a class="slds-truncate" title="Website">{!item.Website}</a>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="Website">{!item.Phone}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+                </tbody>
+            </table>
+            <aura:set attribute="else">
+                <div class="slds-m-left_large">
+                    {!v.message}
+                </div>
+            </aura:set>
+        </aura:if>
+    </lightning:card>
+</aura:component>

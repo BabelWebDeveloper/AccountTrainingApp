@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="accounts" type="Account[]"/>
+<!--    specifies this event carries an array of accounts—the search results—as its data.-->
+</aura:event>

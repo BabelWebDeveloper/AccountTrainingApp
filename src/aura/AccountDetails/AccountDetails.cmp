@@ -1,0 +1,41 @@
+<aura:component>
+    <aura:handler event="c:detailsOnRecordClick" action="{!c.onAccountInfo}"/>
+    <lightning:navigation aura:id="navigation"/>
+    <aura:attribute name="info" type="Account"/>
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    <div class="alignContainer">
+        <aura:if isTrue="{!v.flag}">
+            <lightning:card title="Account Details" iconName="standard:account" >
+                <lightning:recordViewForm
+                        objectApiName="Account"
+                        recordId="{!v.info}"
+                        class="slds-grid">
+                    <lightning:outputField
+                            fieldName="Name"
+                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
+                    <lightning:outputField
+                            fieldName="Phone"
+                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
+                    <lightning:outputField
+                            fieldName="Website"
+                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
+                    <lightning:outputField
+                            fieldName="BillingCity"
+                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
+                </lightning:recordViewForm>
+                <div class="slds-grid slds-gutters slds-align_absolute-center">
+                    <lightning:button onclick="{!c.onViewAccount}" class="slds-col">View</lightning:button>
+                    <lightning:button onclick="{!c.onEditAccount}" class="slds-col">Edit</lightning:button>
+                </div>
+                <p>{!v.messageFromEvent}</p>
+            </lightning:card>
+            <aura:set attribute="else">
+                <lightning:card title="Account Details" iconName="standard:account">
+                    <div class="slds-m-left_xx-large">
+                        No record has been selected.
+                    </div>
+                </lightning:card>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

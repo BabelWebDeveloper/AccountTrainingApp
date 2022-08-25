@@ -1,0 +1,7 @@
+.THIS {
+    height : 120px !important;
+        max-height: 170px !important;
+}
+.THIS.alignContainer{
+    height: 150px;
+}

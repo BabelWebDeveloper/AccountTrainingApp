@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="detailsOnRecordClick">
+    <aura:attribute name="PassData" type="string"/>
+</aura:event>

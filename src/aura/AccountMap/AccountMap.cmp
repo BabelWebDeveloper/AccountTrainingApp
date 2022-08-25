@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:handler event="c:AccountsLoaded" action="{!c.onAccountsLoaded}"/>
+    <aura:handler event="c:sendAccountToMap" action="{!c.loadAccount}"/>
+    <aura:attribute name="mapMarkers" type="Map[]"/>
+    <aura:attribute name="zoomLevel" type="Integer"/>
+    <lightning:card title="Account Map" iconName="standard:address">
+        <lightning:map mapMarkers="{!v.mapMarkers}"
+                       zoomLevel="{!v.zoomLevel}"/>
+    </lightning:card>
+</aura:component>

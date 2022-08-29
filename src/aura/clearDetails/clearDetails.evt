@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="clearDetails">
+    <aura:attribute name="flag" type="Boolean"/>
+</aura:event>

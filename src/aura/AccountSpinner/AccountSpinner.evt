@@ -1,0 +1,7 @@
+<!--
+ - Created by przemyslaw.babel on 29.08.2022.
+ -->
+
+<aura:event type="APPLICATION" description="AccountSpinner">
+    <aura:attribute name="afterSearch" type="Boolean" default="false"/>
+</aura:event>

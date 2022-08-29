@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71d9e20b-d7e2-40f9-aa1a-06726745f7a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetailsRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountHome/AccountHomeController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountList/AccountListRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountRefreshList/AccountRefreshList.evt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountRefreshList/AccountRefreshList.evt-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AccountSpinner/AccountSpinner.evt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/clearDetails/clearDetails.evt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/clearDetails/clearDetails.evt-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/sendAccountToDetails/sendAccountToDetails.evt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/sendAccountToDetails/sendAccountToDetails.evt-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection Inteliji 2019.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Connection Inteliji 2019.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetails.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetails.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetailsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountDetails/AccountDetailsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountHome/AccountHome.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountHome/AccountHome.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountList/AccountList.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountList/AccountList.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountList/AccountListController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountList/AccountListController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountLocator/AccountLocator.cmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountLocator/AccountLocator.cmp-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountSpinner/AccountSpinner.evt-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountMap/AccountMap.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountMap/AccountMap.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountMap/AccountMapController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountMap/AccountMapController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearch.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearch.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearch.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearchController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearchController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearchHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AccountSearch/AccountSearchHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/AccountSearchController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/AccountSearchController.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Lightning Style" />
+        <option value="Lightning Renderer" />
+        <option value="Lightning Controller" />
         <option value="Lightning Application Event" />
         <option value="Apex Metadata" />
       </list>
@@ -28,7 +55,7 @@
         <entry key="Connection Inteliji 2019">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1661427744823" />
+              <option name="moduleContentsLastModified" value="1661807528327" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -43,13 +70,19 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/ACCOUNTDETAILS" value="1661427205000" />
-                      <entry key="AURA/ACCOUNTHOME" value="1661425907421" />
+                      <entry key="AURA/ACCOUNTDETAILS" value="1661812447161" />
+                      <entry key="AURA/ACCOUNTHOME" value="1661812455076" />
                       <entry key="AURA/ACCOUNTINFO" value="1661425961223" />
-                      <entry key="AURA/ACCOUNTLIST" value="1661427817428" />
-                      <entry key="AURA/ACCOUNTMAP" value="1661428091820" />
-                      <entry key="AURA/ACCOUNTSEARCH" value="1661425898000" />
+                      <entry key="AURA/ACCOUNTLIST" value="1661812460562" />
+                      <entry key="AURA/ACCOUNTMAP" value="1661812467277" />
+                      <entry key="AURA/ACCOUNTREFRESHLIST" value="1661772129912" />
+                      <entry key="AURA/ACCOUNTSEARCH" value="1661812470656" />
+                      <entry key="AURA/ACCOUNTSPINNER" value="1661772393067" />
+                      <entry key="AURA/CLEARDETAILS" value="1661765653000" />
+                      <entry key="AURA/DETAILSONRECORDCLICK" value="1661807544000" />
+                      <entry key="AURA/SENDACCOUNTTODETAILS" value="1661807588403" />
                       <entry key="AURA/SENDACCOUNTTOMAP" value="1661427774414" />
+                      <entry key="CLASSES/ACCOUNTSEARCHCONTROLLER.CLS" value="1661812367000" />
                     </map>
                   </option>
                 </ConnectionWorkspaceSettings>
@@ -61,13 +94,19 @@
     </option>
   </component>
   <component name="ProjectId" id="2DqJnzJtPmOuPQuzC835KCiIpkr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub/git-kurs" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -97,9 +136,27 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="-805" y="281" key="FileChooserDialogImpl" timestamp="1661430732090">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-805" y="281" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040/-3840.0.1920.1040@-1920.0.1920.1040" timestamp="1661430732090" />
+    <state x="-1082" y="166" key="SettingsEditor" timestamp="1661433550978">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1082" y="166" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040/-3840.0.1920.1040@-1920.0.1920.1040" timestamp="1661433550978" />
+    <state x="-1082" y="166" key="SettingsEditor/0.0.1536.824/-3840.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1661429130202" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1661812365013">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1661812365013" />
     <state x="-1073" y="99" width="976" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1661428361474">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1073" y="99" width="976" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/-3840.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1661428361474" />
+    <state x="534" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1661794624340">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1252" y="347" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040/-3840.0.1920.1040@-1920.0.1920.1040" timestamp="1661754831318" />
+    <state x="534" y="275" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1661794624340" />
   </component>
 </project>

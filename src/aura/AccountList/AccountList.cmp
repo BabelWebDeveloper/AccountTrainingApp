@@ -1,6 +1,7 @@
 <aura:component>
+<!--    <aura:handler event="c:AccountRefreshList" action="{!c.rerenderList}"/>-->
     <aura:handler event="c:AccountsLoaded" action="{!c.onAccountsLoaded}"/>
-    <aura:registerEvent name="TestEvent" type="c:detailsOnRecordClick"/>
+    <aura:registerEvent name="sendAccountToDetails" type="c:sendAccountToDetails"/>
     <aura:registerEvent name="markerZoom" type="c:LoadAccount"/>
     <aura:registerEvent name="sendAccountToMap" type="c:sendAccountToMap"/>
     <lightning:navigation aura:id="navigation"/>
@@ -8,7 +9,7 @@
     <aura:attribute name="cols" type="Map[]"/>
     <aura:attribute name="records" type="Boolean" default="false"/>
     <aura:attribute name="message" type="String" default="No records has been searched."/>
-    <lightning:card title="Account List" iconName="standard:event">
+    <lightning:card title="Account List" iconName="standard:event" class="slds-p-around_medium">
         <aura:if isTrue="{!v.records}">
             <table class="slds-table slds-table_bordered slds-table_cell-buffer">
                 <thead>

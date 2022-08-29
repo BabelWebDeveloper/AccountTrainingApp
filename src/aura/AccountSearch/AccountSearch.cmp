@@ -1,25 +1,30 @@
 <aura:component controller="AccountSearchController">
     <aura:registerEvent name="accountsLoaded" type="c:AccountsLoaded"/>
-    <aura:attribute name="searchTerm" type="String" default="Uni"/>
-    <div class="alignContainer">
-        <lightning:card title="Account Search" iconName="standard:search">
-            <div class="slds-text-align_left">
-                <div class="slds-grid slds-size_3-of-4">
-                    <div class="slds-col slds-m-left_xx-large slds-size_1-of-2">
-                        <lightning:input
-                                label="Search"
-                                variant="label-hidden"
-                                value="{!v.searchTerm}"
-                                placeholder="Search by name"/>
-                    </div>
-                    <div class="slds-col slds-m-left_xx-large slds-size_1-of-2">
-                        <div class="slds-grid slds-align_absolute-center">
-                                <lightning:button onclick="{!c.onSearchTermChange}" class="slds-col">Search</lightning:button>
-                                <lightning:button onclick="{!c.clearSearchFields}" class="slds-col">Clear</lightning:button>
+    <aura:registerEvent name="accountSpinnerFlag" type="c:AccountSpinner"/>
+    <aura:handler event="c:AccountRefreshList" action="{!c.onSearchTermRerender}"/>
+    <aura:attribute name="searchTerm" type="String"/>
+
+    <lightning:card title="Account Search" iconName="standard:search">
+        <div class="slds-grid slds-form slds-p-around_x-small">
+            <div class="slds-grid slds-grid_vertical slds-align_absolute-center">
+                <div class="slds-col slds-size_large">
+                    <lightning:input
+                            label="Search"
+                            variant="label-hidden"
+                            value="{!v.searchTerm}"
+                            placeholder="Search by name"/>
+                </div>
+                <div class="slds-col slds-align_absolute-center slds-size_large slds-m-top_medium">
+                    <div class="slds-grid slds-gutters slds-align_absolute-center">
+                        <div class="slds-col">
+                            <lightning:button onclick="{!c.onSearchTermChange}">Search</lightning:button>
+                        </div>
+                        <div class="slds-col">
+                            <lightning:button onclick="{!c.clearSearchFields}">Clear</lightning:button>
                         </div>
                     </div>
                 </div>
             </div>
-        </lightning:card>
-    </div>
+        </div>
+    </lightning:card>
 </aura:component>

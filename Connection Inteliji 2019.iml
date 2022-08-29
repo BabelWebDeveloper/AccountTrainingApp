@@ -566,10 +566,6 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="AccountLocator" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="AccountMap" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -595,6 +591,22 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="sendAccountToMap" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AccountRefreshList" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="clearDetails" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AccountSpinner" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="sendAccountToDetails" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

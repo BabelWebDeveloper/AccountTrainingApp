@@ -1,4 +1,14 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+<aura:component implements="flexipage:availableForAllPageTypes,home:availableForDesktop">
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:handler event="c:AccountSpinner" action="{!c.afterSearch}"/>
+    <aura:attribute name="toggleSpinner" type="boolean" default="false"/>
+    <aura:attribute name="afterSearch" type="Boolean" default="false"/>
+    <aura:if isTrue="{!v.afterSearch}">
+        <aura:if isTrue="{!v.toggleSpinner}">
+            <lightning:spinner alternativeText="Loading"  variant="brand" size="large" />
+        </aura:if>
+    </aura:if>
     <lightning:layout horizontalAlign="space" multipleRows="true" class="slds-grid slds-wrap">
         <lightning:layoutItem size="12"
                               mediumDeviceSize="6"
@@ -8,9 +18,7 @@
         <lightning:layoutItem size="12"
                               mediumDeviceSize="6"
                               padding="around-small">
-<!--            <div class="slds-box slds-theme_default">-->
                 <c:AccountDetails/>
-<!--            </div>-->
         </lightning:layoutItem>
         <lightning:layoutItem size="12"
                               mediumDeviceSize="6"

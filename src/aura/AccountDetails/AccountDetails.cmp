@@ -1,41 +1,46 @@
 <aura:component>
-    <aura:handler event="c:detailsOnRecordClick" action="{!c.onAccountInfo}"/>
+    <aura:registerEvent name="accountRefreshList" type="c:AccountRefreshList"/>
+    <aura:handler event="c:sendAccountToDetails" action="{!c.onAccountInfo}"/>
+    <aura:handler event="c:AccountsLoaded" action="{!reDisplayMarkers}"/>
+    <aura:handler event="c:clearDetails" action="{!c.clearDetails}"/>
+<!--    <aura:handler name="change" value="{!v.info}" action="{!c.handleValueChange}"/>-->
     <lightning:navigation aura:id="navigation"/>
     <aura:attribute name="info" type="Account"/>
     <aura:attribute name="flag" type="Boolean" default="false"/>
-    <div class="alignContainer">
-        <aura:if isTrue="{!v.flag}">
-            <lightning:card title="Account Details" iconName="standard:account" >
-                <lightning:recordViewForm
-                        objectApiName="Account"
-                        recordId="{!v.info}"
-                        class="slds-grid">
-                    <lightning:outputField
-                            fieldName="Name"
-                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
-                    <lightning:outputField
-                            fieldName="Phone"
-                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
-                    <lightning:outputField
-                            fieldName="Website"
-                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
-                    <lightning:outputField
-                            fieldName="BillingCity"
-                            class="slds-col slds-size_1-of-4 slds-text-align_center"/>
-                </lightning:recordViewForm>
-                <div class="slds-grid slds-gutters slds-align_absolute-center">
-                    <lightning:button onclick="{!c.onViewAccount}" class="slds-col">View</lightning:button>
-                    <lightning:button onclick="{!c.onEditAccount}" class="slds-col">Edit</lightning:button>
+
+    <aura:attribute name="phone" type="String"/>
+    <aura:if isTrue="{!v.flag}">
+        <lightning:card title="Account Details" iconName="standard:account" >
+            <lightning:recordViewForm objectApiName="Account" recordId="{!v.info}" class="slds-grid">
+                <lightning:outputField fieldName="Name" class="slds-col slds-size_1-of-3 slds-text-align_center"/>
+                <lightning:outputField fieldName="Phone" class="slds-col slds-size_1-of-3 slds-text-align_center"/>
+                <lightning:outputField fieldName="Website" class="slds-col slds-size_1-of-3 slds-text-align_center"/>
+            </lightning:recordViewForm>
+
+            <div class="slds-grid slds-gutters slds-align_absolute-center">
+                <div class="slds-col">
+                    <lightning:button onclick="{!c.onViewAccount}">View</lightning:button>
                 </div>
-                <p>{!v.messageFromEvent}</p>
+                <div class="slds-col">
+                    <lightning:button onclick="{!c.onEditAccount}">Edit</lightning:button>
+                </div>
+            </div>
+        </lightning:card>
+
+        <aura:set attribute="else">
+            <lightning:card title="Account Details" iconName="standard:account">
+                <div class="slds-p-top_large slds-m-left_xx-large">
+                    No record has been selected.
+                </div>
             </lightning:card>
-            <aura:set attribute="else">
-                <lightning:card title="Account Details" iconName="standard:account">
-                    <div class="slds-m-left_xx-large">
-                        No record has been selected.
-                    </div>
-                </lightning:card>
-            </aura:set>
-        </aura:if>
-    </div>
+        </aura:set>
+        <force:recordData aura:id="forceRecord"
+                          recordId="{!v.info}"
+                          fields="Name,Phone,Website"
+                          recordUpdated="{!c.recordUpdated}"/>
+<!--        <force:recordData aura:id="recordHandler"-->
+<!--                          recordId="{!v.info}"-->
+<!--                          layoutType="FULL"-->
+<!--                          mode="EDIT"/>-->
+    </aura:if>
 </aura:component>

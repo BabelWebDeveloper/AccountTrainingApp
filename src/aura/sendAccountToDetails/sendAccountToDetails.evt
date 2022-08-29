@@ -1,0 +1,11 @@
+<!--
+ - Created by przemyslaw.babel on 29.08.2022.
+ -->
+
+<aura:event type="APPLICATION" description="sendAccountToDetails">
+    <aura:attribute name="PassData" type="string"/>
+</aura:event>
+
+<!--<aura:event type="APPLICATION" description="detailsOnRecordClick">-->
+<!--    <aura:attribute name="PassData" type="string"/>-->
+<!--</aura:event>-->
